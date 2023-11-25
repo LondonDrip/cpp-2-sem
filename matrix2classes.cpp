@@ -51,7 +51,7 @@ public:
     SumDiagonalMatrix2x2() : Matrix2x2() {}
     SumDiagonalMatrix2x2(double a, double b, double c, double d) : Matrix2x2(a, b, c, d) {}
 
-    // Переопределение функции determinant для возврата суммы элементов на побочной диагонали
+    // ГЏГҐГ°ГҐГ®ГЇГ°ГҐГ¤ГҐГ«ГҐГ­ГЁГҐ ГґГіГ­ГЄГ¶ГЁГЁ determinant Г¤Г«Гї ГўГ®Г§ГўГ°Г ГІГ  Г±ГіГ¬Г¬Г» ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў Г­Г  ГЇГ®ГЎГ®Г·Г­Г®Г© Г¤ГЁГ ГЈГ®Г­Г Г«ГЁ
     double determinant() const override {
         return a12 + a21;
 };
@@ -63,10 +63,10 @@ int main() {
     Matrix2x2* matrixPtr;
 
     matrixPtr = &matrix1;
-    cout << "Определитель базовой матрицы: " << matrixPtr->determinant() << '\n';
+    cout << "ГЋГЇГ°ГҐГ¤ГҐГ«ГЁГІГҐГ«Гј ГЎГ Г§Г®ГўГ®Г© Г¬Г ГІГ°ГЁГ¶Г»: " << matrixPtr->determinant() << '\n';
 
     matrixPtr = &derivedMatrix;
-    cout << "Определитель производной матрицы (сумма диагоналей): " << matrixPtr->determinant() << '\n';
+    cout << "ГЋГЇГ°ГҐГ¤ГҐГ«ГЁГІГҐГ«Гј ГЇГ°Г®ГЁГ§ГўГ®Г¤Г­Г®Г© Г¬Г ГІГ°ГЁГ¶Г» (Г±ГіГ¬Г¬Г  Г¤ГЁГ ГЈГ®Г­Г Г«ГҐГ©): " << matrixPtr->determinant() << '\n';
 
     return 0;
 }
